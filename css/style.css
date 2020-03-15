@@ -2,12 +2,22 @@
 @import 'basscss-grid.css';
 @import 'tachyons.css';
 @import 'fonts.css';
+@import 'header.css';
+@import 'register.css';
+
+/* CHECK OUT github.com/jxnblk */
+
+:root {
+    /* Use the variable with var() and its name inside */
+    --orange: #ff3c15;
+    --charcoal: #414141;
+}
 
 body {
     font-family: 'HK-Grotesk-Medium', sans-serif;
     font-size: 18px;
     line-height: 1.5;
-    color: #414141;
+    color: var(--charcoal);
 
     /* Background stuff */
     background-image: url('../images/background.jpg');
@@ -16,7 +26,143 @@ body {
     background-size: 100% auto;
 }
 
+/*body::-webkit-scrollbar {
+    width: 12px;
+    height: 100%;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-position {
+    position: inline;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+}*/
+
 a {
     text-decoration: none;
-    color: #414141;
+    color: var(--charcoal);
+}
+
+.heading {
+    font-size: 110px;
+    font-family: 'HK-Grotesk-Bold', sans-serif;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    line-height: 1;
+}
+
+.heading-orange {
+    font-size: 120px;
+    -webkit-text-stroke-color: var(--orange);
+    margin-bottom: 3rem;
+    color: var(--orange);
+}
+
+.tc {
+    text-align: center;
+}
+
+.container {
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+blockquote {
+    color: var(--orange);
+    font-size: 36px;
+}
+
+.cite {
+    display: inline-block;
+    color: var(--orange);
+    line-height: 1;
+    padding: 24px 18px;
+    margin-top: 12px;
+    border-radius: 100%;
+    text-transform: uppercase;
+    font-size:;
+    border: 3px var(--orange) solid;
+}
+
+.speaker-image {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.speaker-name,
+.speaker-title {
+    margin: 0;
+    line-height: 1.33;
+}
+
+.speaker-title {
+    color: #979797;
+    font-family: 'HK-Grotesk-Regular', sans-serif;
+}
+
+.schedule-container {
+    border: solid 3px var(--orange);
+}
+
+.schedule::-webkit-scrollbar {
+    width: 12px;
+    height: 14px;
+    background-color: transparent;
+}
+
+.schedule::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+    border: solid 2px #fff;
+}
+
+.schedule {
+    /* This gives us natural scrolling behavior on touch screens */
+    -webkit-overflow-scrolling: touch;
+}
+
+.schedule-holder {
+        padding: 24px 12px;
+}
+
+.schedule-time {
+    color: var(--orange);
+    font-size: 36px;
+    font-family: 'HK-Grotesk-Bold', sans-serif;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.schedule-day {
+    background-color: var(--orange);
+    color: #fff;
+    padding: 24px;
+    line-height: 1;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+}
+
+.footer {
+    background-color: #222;
+}
+
+.footer-link {
+    width: 131px;
+    height: 40px;
+    background-image: url('../images/logo.svg');
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.visible {
+    opacity: 1;
 }
